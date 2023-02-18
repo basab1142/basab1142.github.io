@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,100&family=Inconsolata&family=PT+Serif:ital@1&family=Sofia+Sans:ital,wght@1,100&family=Ubuntu:ital@1&display=swap');
+
+
+.main{
+    background-color: rgb(129, 210, 224);
+}
+body{
+    background-color: rgb(152, 237, 237);
+}
+
+.main4{
+    /* border: 2px solid red;  */
+    background-color: rgb(221, 235, 226);
+    width: 100vw;
+    height: 100vh;
+    color: black;
+}
+.part{
+   margin: 10px;
+}
+.project1{
+    background-color: rgb(233, 193, 199);
+    height: 20vh;
+    width: 70vw;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    font-family: 'Ubuntu', sans-serif;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.part h2{
+    display: block;
+    width: auto;
+    text-align: center;
+    color: white;
+    font-style: italic;
+}
+.part h2 a{
+    display: block;
+    width: auto;
+    text-align: center;
+    color: white;
+    font-style: italic;
+}
+.project2{
+   
+    background-color: rgb(233, 193, 199);
+    height: 20vh;
+    width: 65vw;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    font-family: 'Ubuntu', sans-serif;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
