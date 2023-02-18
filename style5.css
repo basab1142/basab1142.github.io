@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,100&family=Inconsolata&family=PT+Serif:ital@1&family=Sofia+Sans:ital,wght@1,100&family=Ubuntu:ital,wght@1,300&display=swap');
+body{
+    font-family: 'Ubuntu', sans-serif;    
+}
+.main5{
+    background-color: rgb(172, 205, 185);
+    width: 100vw;
+    background-image: url('ml.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 100% 100%;
+    padding: 10px;
+    height: 100vh;
+}
+.con{
+    background-color: rgb(243, 231, 243);
+    height: 20vh;
+    width: 65vw;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.pic a img{
+    display: flex;
+    height: 20vh;
+}

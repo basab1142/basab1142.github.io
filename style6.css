@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,100&family=Sofia+Sans:ital,wght@1,100&family=Ubuntu:ital,wght@1,300&display=swap');
+body{
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.main6{
+    /* border: 2px solid red; */
+    background-color: rgb(177, 220, 194);
+    width: 100vw;
+    height: 100vh;
+}
+.name{
+    /* border: 2px solid red; */
+    display: block;
+    width: auto;
+}
+.name h2{
+    display: block;
+    width: auto;
+    text-align: center;
+}
+.information{
+    /* border: 2px solid gold; */
+    display: flex;
+    height: 80vh;
+    align-items: center;
+}
+.part1{
+    width :450px;
+    /* border: 2px solid pink; */
+    padding: 30px;
+    margin-top: 70px;
+    margin-left: 125px;
+    margin-bottom: 80px;
+    margin-right: 84px;
+    height: 573px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.part2{
+    width: 450px;
+    /* border: 2px solid pink; */
+    padding: 30px;
+    margin-top: 70px;
+    margin-right: -130px;
+    margin-bottom: 80px;
+    margin-left: 5px;
+    height: 573px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
+}
+.experience h3{
+    color: rgb(127, 127, 224);
+}
+.education h3{
+    color: rgb(127, 127, 224);
+}
+.project_c h3{
+    color: rgb(127, 127, 224);
+}
+.skill h3{
+    color: rgb(127, 127, 224);
+}
+.language h3{
+    color: rgb(127, 127, 224);
+}
+.programming h3{
+    color: rgb(127, 127, 224);
+}
+.certification h3{
+    color:rgb(127, 127, 224);
+}
+.btn{
+    margin-top: 100px;
+    /* background-color: #4CAF50; */
+    border: none;
+    color: #FFFFFF;
+    padding: 15px 32px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    /* margin: 16px 0 !important; */
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+.btn a{
+    color: black;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style4.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar sidebarGo">
+            <nav>
+                <ul>
+                    <li class="page"> <a href="/index.html">Home</a> </li>
+                    <li class="page"> <a href="/about.html">About</a> </li>
+                    <li class="page"> <a href="/Interest.html">Interest</a> </li>
+                    <li class="page"> <a href="/project.html">Project</a> </li>
+                    <li class="page"> <a href="/connect.html">Connect</a> </li>
+                    <li class="page"> <a href="/resume.html">Resume</a> </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="main4">
+            <div class="hamburger">
+                <img class="ham" src="ham.png" alt="" width="23">
+                <img class="cross" src="cross.png" alt="" width="23">
+            </div>
+            <div class="project1">
+                <div class="part">
+                    <h2>Image Captioning</h2>
+                </div>
+                <p>In this project I have used VGG-16 to extract feature from a image and fed it into a Sequential layer
+                    of Embedding and LSTM</p>
+                <p>This is a kaggle challenge (flickr8k) containing around 8k set of data. Each corresponding one or
+                    more caption. <a href="modelpic.png" target="_blank">Model</a></p>
+            </div>
+
+            <div class="project1">
+                <div class="part">
+                    <h2>Facial Emotion recognition</h2>
+                </div>
+                <p>Here I have used 3 convolution layer followed by a maxpooling layer to extract data and then 2 dense layer having dropout layer in between </p>
+                <p>As the classes are ['anger',
+                    'surprise',
+                    'disgust',
+                    'fear',
+                    'neutral',
+                    'happiness',
+                    'sadness',
+                    'contempt'] an output layer with 8 neuron having softmax function</p>
+            </div>
+            <div class="project1">
+                <div class="part">
+                    <h2>Text Generation</h2>
+                </div>
+                <p>This is generative model that is trained on shakespeare Sonnet. The model is based on n-gram sampling and a word2vec embedding layer,</p>
+                <p>followed by a bidirectional LSTM</p>
+            </div>
+            <div class="project1">
+                <div class="part">
+                    <h2>Other works</h2>
+                </div>
+                <p>My other project includes Dog Vision, mnist (fashion and text), Urban sound Classification. Visit my  <a href="https://github.com/basab1142" target="_blank">Github</a> page. Tableau project on superstore data, And many sentiment analysis such as IMBD movie review, Twitte sentiment analysis, BBC archive etc </p>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
