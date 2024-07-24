@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basab Ghosh Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #d0e2ec;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+            padding: 0.5rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        .container {
+            margin-top: 80px;
+            padding: 1rem;
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+            animation-delay: 0.3s;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer a {
+            color: inherit;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        footer a:hover {
+            color: #ddd;
+        }
+
+        footer i {
+            font-size: inherit;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#blog">Blog</a>
+            <!-- <a href="#contact">Contact</a> -->
+        </nav>
+    </header>
+    
+    <div class="container">
+        <section id="about">
+            <h1>About Me</h1>
+            <p>I am a pre-final year computer science student at IIITDM Kancheepuram, focusing on Data Structures, Algorithms, Machine Learning, Deep Learning, and Reinforcement Learning. I am also interested in Natural Language Processing and Computer Vision applications in the real world.</p>
+        </section>
+        
+        <section id="education">
+            <h2>Education</h2>
+            <p>Bachelor of Technology in Computer Science Engineering<br>Indian Institute of Information Technology, Design Manufacturing, Kancheepuram, Tamil Nadu<br>GPA: 8.63/10.0</p>
+        </section>
+        
+        <section id="experience">
+            <h2>Experience</h2>
+            <h3>Project Intern</h3>
+            <p>IIITDM Kancheepuram, TIH-IOT, Chennai, TamilNadu<br>Dec 2022 - July 2023</p>
+            <p>Built an anomaly detection model from the collected dataset to navigate the field and find the anomaly.</p>
+            
+            <h3>Research Intern</h3>
+            <p>IIT Guwahati, Guwahati, Assam<br>May 2024 - Present</p>
+            <p>Study on PPO and TRPO for Better Drone Navigation</p>
+            
+            <h3>Research Intern</h3>
+            <p>AIISC, UofSC<br>May 2024 - Present</p>
+            <p>Study on entity context alignment for LLM alignment, Catastrophic forgetting</p>
+        </section>
+        
+        <section id="skills">
+            <h2>Skills and Competencies</h2>
+            <p><b>Computer Science:</b> DSA, OOP, DL, RL, LLMs, Knowledge Graphs<br>
+            <b>Programming Languages:</b> Python, C++, C<br>
+            <b>Machine Learning frameworks and Libraries:</b> Scikit Learn, TensorFlow, PyTorch, NumPy, Pandas, LangChain, Llamaindex<br>
+            <b>MLOps:</b> CI/CD, Vertex AI (Google Cloud), AWS, Git, Docker, Linux, Kubernetes<br>
+            <b>Data Analytics:</b>Data Analytics: Tableau, PowerBI, SQL, Excel<br>
+            <b>Web Development:</b> HTML, CSS, JavaScript, NodeJS</p>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <h3>Web Application for Image Captioning</h3>
+            <p>Created a web application that can take live pictures/upload to predict the caption using ViT Repo</p>
+            
+            <h3>Snake-RL Agent</h3>
+            <p>Snake RL agent that eats its food overcoming an obstacle. It is based on the DQN and policy gradient algorithm Repo</p>
+            
+            <h3>Karma-Yoga Chatbot</h3>
+            <p>LangChain-based chatbot on KarmaYogaLink</p>
+            
+            <h3>Convolution Added Vision Transformer</h3>
+            <p>Created a convolution-added vision transformer for biometric face recognition</p>
+        </section>
+        
+        <section id="blog">
+            <h2>Blog</h2>
+            <p>Coming soon!</p>
+        </section>
+        
+        <!-- <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: dibakarghosh1868@gmail.com<br>Phone: 6295799403<br>
+            LinkedIn: <a href="https://www.linkedin.com/in/basab-ghosh-901bb4226/" target="_blank">LinkedIn Profile</a><br>
+            GitHub: <a href="https://github.com/basab1142" target="_blank">GitHub Profile</a></p>
+        </section> -->
+    </div>
+    
+    <footer>
+        <a href="https://www.linkedin.com/in/basab-ghosh-901bb4226/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+        <a href="https://github.com/basab1142" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="mailto:dibakarghsogh1868@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+        
+    </footer>
+</body>
+</html>

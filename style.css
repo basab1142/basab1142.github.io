@@ -76,6 +76,10 @@ a{
 .hello{
     font-size: 60px;
 }
+.declaration{
+    font-size: 100px;
+    
+}
 .name{
     font-family: 'Sofia Sans', sans-serif;
     font-weight: bold;
