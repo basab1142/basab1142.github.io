@@ -1,0 +1,17 @@
+# _config.yml
+title: Basab Ghosh Portfolio
+description: Portfolio website
+baseurl: ""
+url: "https://basab1142.github.io"
+exclude:
+  - "node_modules"
+  - "vendor"
+  - ".bundle"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "README.md"
+  - "DBMS_2"  # Exclude any specific directory causing issues
+theme: jekyll-theme-primer
+plugins:
+  - jekyll-seo-tag
+  - jekyll-github-metadata
