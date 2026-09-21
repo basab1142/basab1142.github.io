@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:cmul8.com)",
+      "WebFetch(domain:www.cmul8.com)",
+      "WebFetch(domain:www.linkedin.com)",
+      "Bash(curl -L \"https://huggingface.co/front/assets/huggingface_logo-noborder.svg\" -o \"B:/basab1142.github.io/hf-logo.svg\")"
+    ]
+  }
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Basab Ghosh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --bg2: #111118;
+      --bg3: #18181f;
+      --card: #1c1c25;
+      --border: #2a2a38;
+      --accent: #7c6af7;
+      --accent2: #a78bfa;
+      --text: #e2e2f0;
+      --muted: #8888aa;
+      --tag-bg: #22223a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 6vw;
+      height: 60px;
+      background: rgba(10, 10, 15, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1rem;
+      color: var(--accent2);
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--text); }
+
+    /* ── PAGE ── */
+    .page-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 120px 6vw 80px;
+    }
+
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    h1.page-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .page-subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 3rem;
+    }
+
+    /* ── BLOG GRID ── */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .blog-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .blog-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .blog-thumb { height: 5px; }
+
+    .blog-body {
+      padding: 1.25rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-category {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent2);
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-title {
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+      line-height: 1.4;
+    }
+
+    .blog-excerpt {
+      font-size: 0.83rem;
+      color: var(--muted);
+      flex: 1;
+      margin-bottom: 1rem;
+    }
+
+    .blog-meta {
+      font-size: 0.75rem;
+      color: #555570;
+      font-family: 'JetBrains Mono', monospace;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .blog-meta::before { content: '→'; color: var(--accent); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 2rem 6vw;
+      color: var(--muted);
+      font-size: 0.83rem;
+    }
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    footer .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      transition: color 0.2s, transform 0.2s;
+    }
+    footer .footer-links a:hover {
+      color: var(--accent2);
+      transform: translateY(-2px);
+    }
+    footer .footer-links img.footer-icon {
+      height: 20px;
+      width: 20px;
+      filter: brightness(0) invert(0.55);
+      transition: filter 0.2s;
+    }
+    footer .footer-links a:hover img.footer-icon {
+      filter: brightness(0) saturate(100%) invert(68%) sepia(40%) saturate(500%) hue-rotate(210deg);
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .page-wrap { padding-top: 90px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">basab.ghosh</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#education">Education</a></li>
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="index.html#research">Research</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <p class="section-label">// writing</p>
+  <h1 class="page-title">Blog</h1>
+  <p class="page-subtitle">Research notes and essays from my work at cmul8 and IISc.</p>
+
+  <div class="blog-grid">
+
+    <a class="blog-card" href="https://www.cmul8.com/research/when-five-agents-behave-like-one/" target="_blank">
+      <div class="blog-thumb" style="background: linear-gradient(90deg,#7c6af7,#a78bfa);"></div>
+      <div class="blog-body">
+        <div class="blog-category">Multi-Agent Systems · Jul 2026</div>
+        <div class="blog-title">When Five Agents Behave Like One</div>
+        <div class="blog-excerpt">
+          Five-agent LLM committees collapse to 1.2–1.8 effective independent voters. We ran extensive
+          benchmarks and found a cheaper calibration-based fix.
+        </div>
+        <div class="blog-meta">Read on cmul8</div>
+      </div>
+    </a>
+
+    <a class="blog-card" href="https://www.cmul8.com/research/eval-awareness-base-rates/" target="_blank">
+      <div class="blog-thumb" style="background: linear-gradient(90deg,#f97316,#fb923c);"></div>
+      <div class="blog-body">
+        <div class="blog-category">Interpretability · Aug 2026</div>
+        <div class="blog-title">Eval-Awareness at Deployment Base Rates</div>
+        <div class="blog-excerpt">
+          A linear probe separates EvalAwareBench from WildChat with AUROC 0.986, but artifact controls
+          and base rates tell a more sobering story.
+        </div>
+        <div class="blog-meta">Read on cmul8</div>
+      </div>
+    </a>
+
+    <a class="blog-card" href="https://www.cmul8.com/research/grounded-social-environment-design/" target="_blank">
+      <div class="blog-thumb" style="background: linear-gradient(90deg,#10b981,#34d399);"></div>
+      <div class="blog-body">
+        <div class="blog-category">Agent Systems · Jul 2026</div>
+        <div class="blog-title">Grounded Social Environment Design</div>
+        <div class="blog-excerpt">
+          A four-layer, domain-agnostic architecture for policy simulation using attribute-conditioned LM
+          agents in a closed-loop game framework with co-adaptive mechanisms.
+        </div>
+        <div class="blog-meta">Read on cmul8</div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/basab-ghosh-901bb4226/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/basab1142" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+    <a href="https://scholar.google.com/citations?user=vopFY7cAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+    <a href="https://huggingface.co/basab1142/" target="_blank" title="HuggingFace"><img class="footer-icon" src="hf-logo.svg" alt="HuggingFace"></a>
+    <a href="https://www.csa.iisc.ac.in/people/basab-ghosh/" target="_blank" title="IISc"><i class="fa-solid fa-building-columns"></i></a>
+    <a href="mailto:dibakarghosh1868@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+  </div>
+  <p>Basab Ghosh · Bengaluru, India · 2026</p>
+</footer>
+
+</body>
+</html>
